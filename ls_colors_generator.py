@@ -77,7 +77,7 @@ def get_colors():
 		"*.json":		cc(178, -1, 0xE60B),
 		"*Gruntfile.coffee":			cc(166, -1, 0xE74C),
 		"*Gruntfile.js":			cc(166, -1, 0xE74C),
-		"*gulpfile.js":			cc(204, -1, 0xE763)
+		"*gulpfile.js":			cc(204, -1, 0xE763),
 		"*.coffee":		cc(74, -1, 0xE61B, other="1"),
 		"*.js":			cc(74, -1, 0xE60C, other="1"),
 
