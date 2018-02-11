@@ -3,7 +3,7 @@
 
 # View this file with a 4-space-to-tab ratio.
 def get_colors():
-	
+
 	FORMAT_COLORS = {
 		LEFT		: "",			# Sequence to print *before* outputting a file name.
 		RIGHT		: "",			# Sequence to print *after* outputting a file name.
@@ -30,13 +30,13 @@ def get_colors():
 		CHARDEV		: color_char(178,-1,0xF069),	# A character device (e.g. /dev/random)
 		DOOR		: color_char(84,-1,0xE5FE),		# Client-server communication door. Not needed.
 		EXEC		: color_char(27,-1,0xF135),		# An executable file.
-		SETUID		: "",							# Set UID upon execution			
+		SETUID		: "",							# Set UID upon execution
 		SETGID		: "",							# Set GID upon execution
 		STICKY		: color_char(230,-1,0xE612),	# Sticky bit set.
 		OTHERWRITE	: color_char(230,-1,0xE612),	# Writable by others than the owner + root.
 		STOTHERWRITE: color_char(230,-1,0xE612),	# Sticky, but writable by others than the owner + root.
 	}
-	
+
 	EXTENSION_LIST = {
 		"*bin":			cc(155, -1, 0xF471),
 		"*boot":			cc(27,	-1,	0xF0A0),
@@ -52,7 +52,7 @@ def get_colors():
 		"*sys":			cc(254, -1,	0xF2DB),
 		"*usr":			cc(189, -1, 0xF0C0),
 		"*var":			cc(120, -1, ord("?")),
-		
+
 		"*README":		cc(220, -1, 0xE714),
 		"*README.rst":	cc(220, -1, 0xE714),
 		"*LICENSE":		cc(220, -1, 0xE714),
@@ -837,9 +837,9 @@ def get_colors():
 		".vcf":			cc(7, -1, 0xF10B),
 		".xln":			cc(7, -1, 0xF10B)
 
-		
+
 	}
-		
+
 	return FORMAT_COLORS, SPECIAL, EXTENSION_LIST
 
 # Formats arguments into an LS_COLORS-complete escape sequence.
@@ -905,7 +905,7 @@ if __name__ == "__main__":
 			sys.exit()
 	except:
 		pass
-	
+
 	# Format left/right/exit/reset color codes.
 	for compname in formcol.keys():
 		comp = formcol[compname]
@@ -930,4 +930,4 @@ if __name__ == "__main__":
 		sys.stdout.buffer.write(lsc.encode('utf-8'))
 	except:
 		print(lsc.encode('utf-8')) # python2
-	
+
